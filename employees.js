@@ -64,8 +64,7 @@ empOne.getSchedule();
 */
 
 //CODE HERE
-let empTwo = {...empOne};
-
+const empTwo = {...empOne, name: "Nick"};
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -91,7 +90,18 @@ let empTwo = {...empOne};
 */
 
 //CODE HERE
-
+class Manager extends Employees {
+    constructor(name, shifts, employees) {
+        super(name, shifts);
+        this.employees = employees;
+    }
+    getEmployees () {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee (emp) {
+        this.employees.push(emp);
+    }
+}
 
 
 /*
@@ -106,7 +116,7 @@ let empTwo = {...empOne};
 */
 
 //CODE HERE
-
+let manager = new Manager("Winston", ["weekday mornings", "weekday afternoons"], ["Cece", " Schmidt"]);
 
 /*
     Call the `getEmployees` method on the
@@ -114,7 +124,7 @@ let empTwo = {...empOne};
 */
 
 //CODE HERE
-
+manager.getEmployees();
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -122,7 +132,7 @@ let empTwo = {...empOne};
 */
 
 //CODE HERE 
-
+manager.addEmployee(" Steve");
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -130,3 +140,4 @@ let empTwo = {...empOne};
 */
 
 //CODE HERE
+manager.getEmployees();

@@ -60,7 +60,7 @@ console.log(summedPrice)
 
 const calcFinalPrice = (cartTotal, couponValue, tax) => {console.log(cartTotal * (tax + 1) - couponValue)};
 
-calcFinalPrice(45, .06, 12);
+calcFinalPrice(45, 12, .06);
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -83,7 +83,10 @@ calcFinalPrice(45, .06, 12);
 
 /*
     TEXT ANSWER HERE
-
+    orderNum to identify where to send the order
+    allergies to make sure not to poison any customers
+    orderTotal what to charge the customer
+    isThirsty to see if the customer want's to include a drink or not
 */
 
 /*
@@ -92,3 +95,10 @@ calcFinalPrice(45, .06, 12);
 */
 
 //CODE HERE
+const customerCart = {
+    "orderNum": 57,
+    "allergies": "allergic to pickles",
+    "orderTotal": 15,
+    "isThirsty": true
+}
+console.log(customerCart);
